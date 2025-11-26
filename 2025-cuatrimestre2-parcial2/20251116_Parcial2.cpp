@@ -12,28 +12,34 @@ prueba de campo.
 Mediante la función
 
 Medicion obtenerProximaMedicion();
+
 La función devuelve mediciones válidas hasta que el campo cod_sensor viene en -1.
+
 La información que trae el Medicion es la siguiente:
+
 int cod_sensor;   // código del sensor (1 a MAX_SENSORES)
 int muestra;      // número de muestra (1 a MAX_MUESTRAS)
 int valor;        // valor medido en grados Celsius (entero)
+
 También existe otra función que nos completa la información sobre los sensores
 usados para la medición.
 
 void completarInformacionSensores(Sensor sensores[MAX_SENSORES]);
+
 struct Sensor {
     int cod_sensor;
     char modelo[MAX_MODELO]; //nombre modelo
     char lugar[MAX_LUGAR]; // descripción del lugar donde está instalado
     bool esta_activo;
 };
+
 En base a esto se necesita:
-Mostrar el lugar que registró la mayor temperatura promedio.
-Mostrar por pantalla código de sensor, modelo, número de muestra y valor
+1. Mostrar el lugar que registró la mayor temperatura promedio.
+2. Mostrar por pantalla código de sensor, modelo, número de muestra y valor
 cada vez que se obtiene una lectura menor a -10 grados Celsius o mayor a 60
 grados Celsius, en el caso que la medición haya sido hecha por un sensor que está
 activo.
-Calcular las temperaturas mínimas censadas por cada sensor.
+3. Calcular las temperaturas mínimas censadas por cada sensor.
 */
 
 // definición constantes
